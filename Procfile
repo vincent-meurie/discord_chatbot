@@ -1,0 +1,1 @@
+worker: node commands_bot.js
