@@ -56,9 +56,12 @@ commandHandlerForCommandName['rank'] = (msg, args) => {
         }
 
         try {
+            /* USELESS SINCE LAST API UPDATE
             if (typeof data[1] !== 'undefined') {
                 data[0] = data[1]
             }
+            */
+
             const {summonerName, tier, rank, leaguePoints} = data[0]
             if (tier === "MASTER" || tier === "GRANDMASTER" || tier === "CHALLENGER") {
                 return msg.channel.createMessage({content: `${summonerName} est actuellement ${capitalize(tier.toLowerCase())} avec ${leaguePoints} LP.`, messageReferenceID: msg.id})
