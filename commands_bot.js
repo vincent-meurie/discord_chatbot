@@ -25,6 +25,22 @@ commandHandlerForCommandName['runes'] = (msg, args) => {
     return msg.channel.createMessage({content: `Phase Rush -> Matchups scale, ranged et où il faut disengage | Conqueror -> Matchups mêlée gagnables en early | En dessous de Platinum 2, je vous conseille de prendre Conqueror toutes les games`, messageReferenceID: msg.id})
 }
 
+commandHandlerForCommandName['opgg'] = (msg, args) => {
+    return msg.channel.createMessage({content: `https://www.op.gg/multisearch/euw?summoners=STREYITO%2CStrey+en+mission%2CLFT+Strey`, messageReferenceID: msg.id})
+}
+
+commandHandlerForCommandName['playlist'] = (msg, args) => {
+    return msg.channel.createMessage({content: `La playlist médiévale : https://open.spotify.com/playlist/2hFIMWxjIeDB1PLqksENuG?si=650f7706f13c48f8 La playlist Oblivion : https://open.spotify.com/playlist/6h5eZko4HLKBFeGkHpKlUX?si=1f9c65083f2c4e48 et la playlist Skyrim : https://open.spotify.com/album/25r7pEf31viAbsoVHC6bQ4?si=zbjtDClwQ6yN6eqC-063wg`, messageReferenceID: msg.id})
+}
+
+commandHandlerForCommandName['qui'] = (msg, args) => {
+    return msg.channel.createMessage({content: `https://lolpros.gg/live/strey`, messageReferenceID: msg.id})
+}
+
+commandHandlerForCommandName['vod'] = (msg, args) => {
+    return msg.channel.createMessage({content: `La chaîne VOD avec les meilleures games de chaque stream : https://www.youtube.com/channel/UCzI3AVV_K0x_QHgvjqWKqXg`, messageReferenceID: msg.id})
+}
+
 commandHandlerForCommandName['rank'] = (msg, args) => {
     const rankFetch = async(msg, args) => {
         const accountUrl = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${args.join('%20')}?api_key=${process.env.API_KEY}`
